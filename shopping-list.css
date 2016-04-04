@@ -13,19 +13,19 @@ h1 {
 
 #add-items {
     margin-left: 210px;
-    background: #A5C663;
+    background: whitesmoke;
     border-radius: 7px;
     border-width: 2px;
-    border-style: ridge;
+    border-style: dashed;
     height: 30px;
     width: 150px;
     color: whitesmoke;
 }
 
 button {
-    Background-color: #A5C663;
+    Background-color: whitesmoke;
     border-width: 2px;
-    border-style: ridge;
+    border-style: dashed;
     border-radius: 7px;
     font-size: 20px;
     height: 30px;
@@ -43,18 +43,15 @@ button {
 
 #list .items {
     font-size: 20px;
+    color: whitesmoke;
 }
 
 .box {
     float: left;
-    background-color: white;
+    background-color: whitesmoke;
     border-width: 1px;
     border-radius: 4px;
     margin-top: 20px;
     height: 15px;
     width: 15px;
-}
-
-span {
-    margin: 0;
 }
