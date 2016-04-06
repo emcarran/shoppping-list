@@ -10,10 +10,9 @@ $(document).ready(function () {
             });
 
             //add list items
-            $('#add').click(function () {});
+            $('#add').click(function () {
+                var textbox =
+                    var textval = textbox.value;
+                event.preventDefault();
 
-            //delete list items
-
-            //cross off list items
-
-            //show delete button
+            });

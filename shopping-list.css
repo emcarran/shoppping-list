@@ -38,7 +38,7 @@ button {
 #list {
     list-style: none;
     text-align: left;
-    margin-left: none;
+    padding-left: 215px;
 }
 
 #list .items {
@@ -47,11 +47,19 @@ button {
 }
 
 .box {
-    float: left;
+    /*float: left;*/
+    display: inline-block;
     background-color: whitesmoke;
     border-width: 1px;
     border-radius: 4px;
     margin-top: 20px;
     height: 15px;
     width: 15px;
+}
+
+.delete-box {
+    /*display: inline;*/
+    position: absolute;
+    right: 300;
+    padding-top: 12px;
 }
