@@ -17,17 +17,19 @@ h1 {
     border-radius: 7px;
     border-width: 2px;
     border-style: dashed;
+    border-color: whitesmoke;
     height: 30px;
     width: 150px;
-    color: whitesmoke;
+    color: darkslategray;
 }
 
-button {
+#submit {
     Background-color: whitesmoke;
     border-width: 2px;
     border-style: dashed;
     border-radius: 7px;
     font-size: 20px;
+    color: darkslategray;
     height: 30px;
     padding: 0 10px;
     margin-top: 10px;
@@ -46,20 +48,30 @@ button {
     color: whitesmoke;
 }
 
-.box {
+.checkbox {
     /*float: left;*/
     display: inline-block;
     background-color: whitesmoke;
     border-width: 1px;
     border-radius: 4px;
     margin-top: 20px;
-    height: 15px;
-    width: 15px;
+    height: 17px;
+    width: 17px;
 }
+
+.ticked:before {
+    font-family: FontAwesome;
+    content: "\f00c";
+    color: darkslategray;
+    /*content: "✓";*/
+}
+
+
+/*background-color: red;*/
 
 .delete-box {
     /*display: inline;*/
     position: absolute;
-    right: 300;
+    left: 420;
     padding-top: 12px;
 }
