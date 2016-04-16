@@ -14,9 +14,12 @@ function addItems() {
         alert('you must enter a value');
     } else {
 
+
+        // alert('the value is greater than 1');
+
         var line1 = '<li class="items">';
-        var line2 = '<div class="checkbox"></div> ';
-        var line3 = '<span>' + itemValue + '</span>';
+        var line2 = '<div class="checkbox"></div>';
+        var line3 = '<span> ' + itemValue + '</span>';
         var line4 = '<img class="delete-box" src="trash-can-web-icon_small.jpg">';
         var line5 = '</li>';
 
@@ -29,68 +32,43 @@ function addItems() {
 function tickItem() {
     //alert("I've just activated the tickItem() function");
     $(this).toggleClass('ticked');
-
 }
-
 
 function deleteItem() {
+    console.log("deleteItem clicked");
     //alert("I've just activated the deleteItem() function");
-    $(this).parent().remove();
 
-    //setTimeout(function () {
-    //$(this).parent().remove()
-    //}, 1300);
+    //$(this).parent().remove();
+    var itemToBeDeleted = $(this).parent();
 
-    //window.setTimeout(function () {
-    //deleteItem;
-    //}, 5000);
+    setTimeout(function () {
+        console.log("remove item in setTimeout function");
+        // $(this).parent().remove();
+        $(itemToBeDeleted).remove();
+    }, 1000);
 }
 
-
-
 $(document).ready(function () {
-    //$('.checkbox').show();
-    //$('.tickedbefore').hide();
-
-    //$('.checkbox .ticked').change(function () {
-    //if ($(this).prop("ticked")) {
-    //$('#showDiv').show();
-    //} else {
-    // $('#hideDiv').hide();
-    //}
-    //});
 
     //add list items
 
     $('#submit').on('click', function () {
         addItems();
-        $('#add-items').val("");
     });
+
+    //add item on enter
 
     $('#add-items').keypress(function (event) {
         if (event.which == 13) {
             addItems();
             $(this).val("");
-
         }
-
-        //   $('.input').keypress(function (e) {
-        //        if (e.which == 13) {
-        //            $('form#login').submit();
-        //            return false;    //<---- Add this line
-        //        }
-        //    });
-
-
     });
+
 });
 
+// $('.delete-box').on('click', '.hide');
 
 $(document).on('click', '.delete-box', deleteItem);
 
 $(document).on('click', '.checkbox', tickItem);
-
-
-/*key press event handlers for extra functionality */
-
-/*add item on button press or enteer*/
